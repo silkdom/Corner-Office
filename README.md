@@ -23,7 +23,7 @@ pass_box = wd.find_element_by_name('ctl00$ctl00$TemplateContent$mainbody$ui_PWor
 # Send password information
 pass_box.send_keys('********')
 ```
-![Image of login](https://github.com/silkdom/Corner-Office/blob/master/img/git1.png)
+![Image of login](https://github.com/silkdom/Corner-Office/blob/master/img/git_1.png)
 
 ## Installation
 
