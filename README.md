@@ -5,7 +5,7 @@ The MMA program at Rotman is intensive, and thus I spend most of my day every da
 
 What are the 'best' rooms you may say? In my opinion they are those with windows, are close to the water fountain/bathroom, and are spacious. Of all the rooms at Rotman, the corner room on the 3rd floor (3064) can be seen as the holy grail in this regard. I created this project to alleviate my room booking issues and lay claim to the corner office!
 
-# How it works
+## How it works
 
 The web-based automation package selenium was chosen alongside a WebDriver to do the heavy work. Once the ChromeDriver is initialized, the login website is input and the login credentials are filled. The element names are found via the inspect feature of the Chrome browser.
 ```python
@@ -24,6 +24,8 @@ pass_box = wd.find_element_by_name('ctl00$ctl00$TemplateContent$mainbody$ui_PWor
 pass_box.send_keys('********')
 ```
 ![Image of login](https://github.com/silkdom/Corner-Office/blob/master/img/git_1.png)
+
+
 
 ## Installation
 
@@ -46,7 +48,7 @@ options.add_argument('-disable-dev-shm-usage')
 
 ```
 
-# Usage
+## Usage
 
 Google sheets
 
