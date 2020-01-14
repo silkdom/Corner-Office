@@ -7,7 +7,7 @@ What are the 'best' rooms you may say? In my opinion they are those with windows
 
 ## How it works
 
-The web-based automation package selenium was chosen alongside a WebDriver to do the heavy work. Once the ChromeDriver is initialized, the login website is input and the login credentials are filled. The element names are found via the inspect feature of the Chrome browser.
+The web-based automation package selenium was chosen alongside a WebDriver to do the heavy work. Once the ChromeDriver is initialized, the login website is input and, login credentials are filled, and the login button clicked. The id and password element names are found via the inspect feature of the Chrome browser.
 ```python
 # Initialize the driver
 wd = webdriver.Chrome('chromedriver',options=options)
@@ -22,9 +22,45 @@ id_box.send_keys('Dominic.Silk20@Rotman.Utoronto.Ca')
 pass_box = wd.find_element_by_name('ctl00$ctl00$TemplateContent$mainbody$ui_PWord')
 # Send password information
 pass_box.send_keys('********')
+
+# Find login button
+login_button = wd.find_element_by_id('ctl00_ctl00_TemplateContent_mainbody_ui_SubmitButton')
+# Click login
+login_button.click()
 ```
 ![Image of login](https://github.com/silkdom/Corner-Office/blob/master/img/git_1.png)
 
+On the resultant page the desired booking date/time/duration is entered, and the reserve room button clicked. The inspect features XPath copy had to be applied for the button click.
+
+```python
+select_dates = Select(wd.find_element_by_name('ctl00$ctl00$body$mainbody$ui_DateList'))
+select_dates.select_by_visible_text('date input')
+
+select_time = Select(wd.find_element_by_name('ctl00$ctl00$body$mainbody$ui_TimeDropDownList'))
+select_time.select_by_visible_text('time')
+
+select_duration = Select(wd.find_element_by_name('ctl00$ctl00$body$mainbody$ui_DurationDropDownList'))
+select_duration.select_by_visible_text('duration')
+
+wd.find_element_by_xpath('//*[@id="body_mainbody_ui_RoomGridView"]/tbody/tr[33]/td[3]/a').click()
+```
+
+![Image of login](https://github.com/silkdom/Corner-Office/blob/master/img/git_2.png)
+
+Finally, the emails of the two group members required to book a room are input and the submit request button is clicked.
+
+```python
+emails = wd.find_element_by_id('Members')
+emails.send_keys('emails')
+
+comment = wd.find_element_by_id('rComment')
+comment.send_keys('test')
+
+submit_request = wd.find_element_by_id('BookPanelOkButton')
+submit_request.click()
+```
+
+![Image of login](https://github.com/silkdom/Corner-Office/blob/master/img/git_3.png)
 
 
 ## Installation
