@@ -127,3 +127,7 @@ df = pandas.read_csv(URL)
 ## Results
 
 Picture of corner room
+
+## Future work
+
+Deployment on AWS Lambda or as a cronjob on Heroku
