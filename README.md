@@ -30,7 +30,7 @@ login_button = wd.find_element_by_id('ctl00_ctl00_TemplateContent_mainbody_ui_Su
 # Click login
 login_button.click()
 ```
-![Image of login](https://github.com/silkdom/silkdom.github.io/blob/master/assets/logo.JPG)
+![Image of login](https://github.com/silkdom/Corner-Office/blob/master/img/git_1.png)
 
 On the resultant page the desired booking date/time/duration is entered, and the reserve room button clicked. The inspect features XPath copy had to be applied for the button click.
 
