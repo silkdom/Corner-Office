@@ -7,7 +7,7 @@ What are the 'best' rooms you may say? In my opinion they are those with windows
 
 ## How it works
 
-Code can be found **here!**
+Code can be found **[here!](https://github.com/silkdom/Corner-Office/blob/master/Corner_Office.ipynb)**
 
 The web-based automation package selenium was chosen alongside a WebDriver to do the heavy work. Once the ChromeDriver is initialized, the login website is input and, login credentials are filled, and the login button clicked. The id and password element names are found via the inspect feature of the Chrome browser.
 ```python
